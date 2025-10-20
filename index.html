@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Profile Card</title>
+    <link rel="stylesheet" href="task-0.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <article data-testid="test-profile-card" class="profile-card">
+            <header class="card-header">
+                <figure class="avatar-container">
+                    <img data-testid="test-user-avatar" src="./assets/batman.webp" class="avatar-image" />
+                </figure>
+
+                <div class="profile-details">
+                    <h2 data-testid="test-user-name" aria-label="Name">
+                        Mykel Akinsade
+                    </h2>
+
+                    <p data-testid="test-user-bio">
+                        Frontend developer specializing in accessible and performant web applications. Passionate about
+                        semantic HTML, robust testing, and clean code architecture.
+                    </p>
+
+                    <section class="time-box">
+                        <h3 class="time-label">Current Time (Milliseconds)</h3>
+                        <!-- data-testid="test-user-time" is crucial for automated time checks -->
+                        <span id="time-display" data-testid="test-user-time" class="time-value">
+                            <!-- Initial time will be inserted by JS -->
+                        </span>
+                    </section>
+                </div>
+            </header>
+
+            <div class="main-content">
+                <section data-testid="test-user-hobbies" class="list-section">
+                    <h3 class="section-title">
+                        Hobbies
+                    </h3>
+                    <ul class="item-list">
+                        <li class="list-item">Coding Challenges</li>
+                        <li class="list-item">Playing chess</li>
+                        <li class="list-item">Playing Guitar</li>
+                    </ul>
+                </section>
+
+                <section data-testid="test-user-dislikes" class="list-section">
+                    <h3 class="section-title">
+                        Dislikes
+                    </h3>
+                    <ul class="item-list">
+                        <li class="list-item">Fixed Pixel Widths</li>
+                        <li class="list-item">Poor Keyboard Navigation</li>
+                        <li class="list-item">Stubborn bugs</li>
+                    </ul>
+                </section>
+
+                <nav data-testid="test-user-social-links" class="social-nav">
+                    <h3 class="section-title">
+                        Connect
+                    </h3>
+                    <ul>
+                        <li>
+                            <a data-testid="test-user-social-github" href="#" target="_blank" rel="noopener noreferrer"
+                                class="social-link link-github">
+                                GitHub
+                            </a>
+                        </li>
+                        <li>
+                            <a data-testid="test-user-social-linkedin" href="#" target="_blank"
+                                rel="noopener noreferrer" class="social-link link-linkedin">
+                                LinkedIn
+                            </a>
+                        </li>
+                        <li>
+                            <a data-testid="test-user-social-twitter" href="#" target="_blank" rel="noopener noreferrer"
+                                class="social-link link-twitter">
+                                Twitter/X
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </article>
+    </div>
+    <script src="task-0.js"></script>
+</body>
+
+</html>
